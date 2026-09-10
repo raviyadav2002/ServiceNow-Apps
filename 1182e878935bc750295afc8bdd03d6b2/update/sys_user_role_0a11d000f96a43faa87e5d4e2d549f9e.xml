@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+  <sys_user_role action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>0a11d000f96a43faa87e5d4e2d549f9e</sys_id>
+    <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+    <sys_update_name>sys_user_role_0a11d000f96a43faa87e5d4e2d549f9e</sys_update_name>
+    <assignable_by/>
+    <can_delegate>true</can_delegate>
+    <description/>
+    <elevated_privilege>false</elevated_privilege>
+    <grantable>true</grantable>
+    <name>x_1918526_expens_0.expense_admin</name>
+    <scoped_admin>false</scoped_admin>
+    <suffix>expense_admin</suffix>
+  </sys_user_role>
+</record_update>

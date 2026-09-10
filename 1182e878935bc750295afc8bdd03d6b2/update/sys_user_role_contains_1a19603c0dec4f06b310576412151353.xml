@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+  <sys_user_role_contains action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>1a19603c0dec4f06b310576412151353</sys_id>
+    <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+    <sys_update_name>sys_user_role_contains_1a19603c0dec4f06b310576412151353</sys_update_name>
+    <contains name="x_1918526_expens_0.expense_user">1615ef9aa1d84aad851f619f7821032a</contains>
+    <role name="x_1918526_expens_0.expense_manager">d7f183d43cad45a6948231b919aeb71f</role>
+  </sys_user_role_contains>
+</record_update>

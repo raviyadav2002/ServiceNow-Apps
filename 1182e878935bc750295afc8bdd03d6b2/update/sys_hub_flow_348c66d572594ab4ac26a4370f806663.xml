@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>timeFromCreateToActivate=11000</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source>fluent</generation_source>
+        <internal_name>expense_claim_approval_workflow</internal_name>
+        <label_cache>[{"name":"Updated_1.current.manager","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Manager","type":"string","base_type":"string","usedInstances":{"9d7bd913-c2c3-4837-abae-c1ebe3307ec5":["conditions"],"a86ce780-09c6-4c8b-bda8-29b513dce220":["approval_conditions"]},"attributes":{}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Number","type":"string","base_type":"string","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["ah_subject"],"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["ah_subject"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record","type":"reference","base_type":"reference","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["record"],"a86ce780-09c6-4c8b-bda8-29b513dce220":["record"],"7e301ab8-56bd-409c-9df7-e6a547722b22":["record"],"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["record"],"7a361d58-1de7-49f1-8aa8-bc87193b6844":["record"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["record"]},"attributes":{}},{"name":"9d7bd913-c2c3-4837-abae-c1ebe3307ec5.Record.email","label":"9d7bd913-c2c3-4837-abae-c1ebe3307ec5➛Record➛email","type":"string","base_type":"string","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["ah_to"]},"attributes":{}},{"name":"a86ce780-09c6-4c8b-bda8-29b513dce220.approval_state","label":"a86ce780-09c6-4c8b-bda8-29b513dce220➛approval_state","type":"choice","base_type":"choice","usedInstances":{"a25ee7d6-1cbc-4e47-a58e-c58e13f403f0":["condition"],"79599b72-b807-403c-b20d-aab453848042":["condition"]},"attributes":{}},{"name":"Updated_1.current.employee.email","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Employee➛Email","type":"string","base_type":"string","usedInstances":{"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["ah_to"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["ah_to"]},"attributes":{}}]</label_cache>
+        <master_snapshot>f3e5ec30939bc750295afc8bdd03d6a4</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Expense Claim Approval Workflow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>dcf52070939bc750295afc8bdd03d6d8</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>348c66d572594ab4ac26a4370f806663</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Expense Claim Approval Workflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name>sys_hub_flow_348c66d572594ab4ac26a4370f806663</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:34</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=348c66d572594ab4ac26a4370f806663"/>
+    <sys_variable_value action="delete_multiple" query="document_key=348c66d572594ab4ac26a4370f806663"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1918526_expens_0_claim">claim_status=submitted<item display_value="Submitted" endquery="false" field="claim_status" goto="false" newquery="false" operator="=" or="false" value="submitted"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dcf52070939bc750295afc8bdd03d6d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:34</sys_updated_on>
+        <table>x_1918526_expens_0_claim</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>348c66d572594ab4ac26a4370f806663</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:34</sys_created_on>
+        <sys_id>98f52070939bc750295afc8bdd03d6da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:34</sys_updated_on>
+        <trigger display_value="">dcf52070939bc750295afc8bdd03d6d8</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=348c66d572594ab4ac26a4370f806663^sys_idNOT IN98f52070939bc750295afc8bdd03d6da"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=348c66d572594ab4ac26a4370f806663"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=348c66d572594ab4ac26a4370f806663^sys_idNOT IN03e5ac30939bc750295afc8bdd03d674,7ee5ac30939bc750295afc8bdd03d616,83e5ac30939bc750295afc8bdd03d66a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</model>
+        <model_id>348c66d572594ab4ac26a4370f806663</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:29</sys_created_on>
+        <sys_id>03e5ac30939bc750295afc8bdd03d674</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=03e5ac30939bc750295afc8bdd03d674"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</model>
+        <model_id>348c66d572594ab4ac26a4370f806663</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:28</sys_created_on>
+        <sys_id>7ee5ac30939bc750295afc8bdd03d616</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7ee5ac30939bc750295afc8bdd03d616"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</model>
+        <model_id>348c66d572594ab4ac26a4370f806663</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:29</sys_created_on>
+        <sys_id>83e5ac30939bc750295afc8bdd03d66a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:29</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=83e5ac30939bc750295afc8bdd03d66a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=348c66d572594ab4ac26a4370f806663^sys_idNOT INf8af5a5d122444dc9adb3351aad29f64"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>f8af5a5d122444dc9adb3351aad29f64</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Y32/bNhD+VwQ9dYAHOBs6bHnr1gUI0K5Ak7UPWSHQ5MkmSpMeebKtBfnfe5Qom5HkRG3kpUXzlOj44767+z6S56vrFK2cz8Gea4dMc7go3blIT9N0kio2A0X/XrKZAvqWGsFqpi7LFZAZvTnTbOnHBKxAC9BYL+ULIzm8ko6+rz5M0iXTgqGxZXqKtoBJmluzvITlSjGkvXKmHBmNFWDT05PpdJJW+wYntOGaqcJ/b7OT305+ff7TLxlsyaPLphlXTC49BOlou/Ld/TP5QiphQdfYVsySL/Serzsxt2BgT+gBNWGGLfokiF1AUdjBYoGJN1qV0ZStk/9Btb5wkEWJDDPyi4XZvIUcCDGHM6krd2FQGc7U7oshVXNWIDiK5eZml5MzCSoU1XErV/iCo1w3ib+ZDGHB20In7xegk78d2KQqbYcScyUFZKoeG06JJtD7OFGRIIIWimMLnW0IWUb5s433hjBdYgwjQG+4dznEnhR8rdRImVj7Mvs8ej2mx+LKBTgnjf+LKPW8y5iaFfew5TrNm+JVy1mNiOJ/FRz6vCXea25sXbHz/cQGhV9wvmTzQIL8AhRwjGqS08ro67WkZQR6H/kOhjY6GwLlL6N/PC6SmcFF7L7x/DvZbyWB+HYIjnsgni9Tc1tMbseR9e3YWvoN1s/RcJeGh51ji5jfs4ZzZTZEoofLlumyQ1K/t9TEyzLhhrbf4oiyIAnA3JpCi0N+b88YS42Mf7zb7X5G8kxAzgqFPzy2/Dw2Os5i5cVxtPUXjw1U4Z5IvW6fNLdP1Rud/BmCTqpXqHu4/CqsLULSccgLSwnA6mpoEp1g43M0KXpL1zvdkhGE5oH9qDqgS33Ht70WGvwtGTTmgQroLetB30+CqDP3h9FCYv1iamugGXJH6TVCaXgEoCFE1UZmhBkL908xnf4sXDFbSkToOS3vnjyAPHEKekBhTzaOxpbQu38pWTZMo8vQZEyILEK8O6CWRoB6GdUyMIRuiVWBLr2JKk2K2TXmx+x0R2td+t5A9FD37x/fR4544hoNmcl7mxKZJyEBdA7NygQXQCgU3cS0V4VjzKNfG1+mNpiXJqGBxP4vcMbpTapGv9ug1CVtKb42fvZPDId7k5bzp7thn77LetbDxVlo+W8BGV8wPa9fPw1bz0ijwPgiqack9ZRR1cpbPyDwMbeHNdiyE5A3JsVKeAGM54upDStd5+AhlXvBh7ceGYjauibzo0m7uVkcWpo5LyNVh4K0ZB2sA3W9J+Zhf9+KkIfr9sMngIH9SFAYAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=348c66d572594ab4ac26a4370f806663^sys_idNOT IN687f705032024677a449dddf8ca1463f,7a361d581de749f18aa8bc87193b6844,7e301ab856bd409c9df7e6a547722b22,9d7bd913c2c34837abaec1ebe3307ec5,a20be0ffc9fd47a19494f7dd6f969b48,a86ce78009c64c8bbda829b513dce220,b56e3fd06b2c4e058139393b72ee99fa"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>687f705032024677a449dddf8ca1463f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>687f7050-3202-4677-a449-dddf8ca1463f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Y227jNhCGX4XQtaPKlo+5y8YNGmA3W8Tp9mKxEChyFLOlRC1JxXEDv3tHlGzLBzgnZOFtc2eNxNHM8Ps5I3998DKagnfqWRpLiNxFy7ujsiiN91F71B72Ov0I7nPITBRETFKR4iNcmFzS+ZfHn8ypRq8WtHf64LGpkFxD5p1+/dbyBMel7dEw6MdJlw6CsBMGwbAzGsXhKAmGg1HQ5l10IWkMEh+9KYPE630x23m+1/axuZZcVTeU5mU87ZYH9xYyDhhIQqWBlpfSjFOr9Hxl0UD550yiweoCr6cis6XDKRBL9S1YooGhR2Lr8FJ6b8Q/GM0wKFcngAmzMjivcRnVFazMyZhaOkH/zBa6fpRNlWBgqlJxSGgh7XnTVj3wObdCZdWSKoJqtZJFml1VlfJWDpYbhpbCYBCQl+mXCdXZJpOpml0vo7wQmatUfVMqRuXqilqrRVzYMp4HDySk6ChKaZ6L7DbKtboTbjHGkvq3Ei/8RKoZvtSI28ynrAzcx2pT/wLtY2f+QrUos/iEbnAxQmIiw7TIl7m5l3uLlmfm5lxSY9Y5YnGj70UZYZVxnVtUladc4hyd4YvvoE5j0VppYEaR0pTqvyNIqZANIbR3iS9ZeALdQb8fx/24NwjXdI9Ywgdx0qcDFjbovsyYLDiQP5dhrEnfjazGPVZKAs22WcfYfrlwdVqx3nkm67Whhr2CjFhFcFvknFCyCqk0WtSCiwx/UUuEIQbr7pMbRUSdVWNFi8xVQdLCWHzM4p0NGflNBXWPV0E1ALV1vJeOn0JibyElOo1MEf8FzDZU9KtrDUDOy85AHh7+yDEw4FHbZ4XWJTBZkcagFwtyQs7yMjsqyTV8L4RGanck+Gp/j4m3xw+1JmAN8U5W2e6rQK1Wg5uZ3W6JdbI01kLtHxZq1YN2dNroOcHxauZ/LolY8XlDD2cZgRphNyyRKTUkBsgIkpMKiywT3Hg8Fx2xpjw2dXkAO5B98jse/bhWw52AmTuDKzciIxPQd7hLV2rm7+rmh733MX3Rg/pKOg19fahKt1PLWllTm8otXf128+njWlWDl7W/laz6vV7Yf9fVq6e5fMY7XKs8r3NzjfIt5FYNEw217ekPi8WuOJ6AbfcgtoxvfLG4yeZ6Gcx2cDW+XLHClVvwLYrH9R1yOV7DHLxqljszRjGBlTCNuW0m7BQnsT0jWNjZxB4HOuEY24//5fr2Ecig6pbPUEEyAarZ9EKALLe6GiC8bXUwPAF1tMVkPfMdS0dqfAk/pTdZtaGVEX6h8FE7PGEdFp50h+HghMYUTlgbYgjDYACs51dY+46gfVp6qZtH57LDfxnQpgDVRtdwWT5nGgvfp7Ej6BocpMDBxDl6s46BeDD2oobAD/IIQYPH8/MNHt0Ln8Nj95VzzDuQPxWQ8QuJbB/+cu03J+stJONnM9l7Z/I/zuS3fwG6+t5tKRgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=687f705032024677a449dddf8ca1463f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="">f9d01dd2c31332002841b63b12d3aea1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>79599b72-b807-403c-b20d-aab453848042</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>7a361d581de749f18aa8bc87193b6844</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>7a361d58-1de7-49f1-8aa8-bc87193b6844</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Uy27bMBBFf8XgWhAkKzYc74q4Bgq0CZq03qQpQZEjmwX1KB+OXcP/3qEky4ITxFlk0QDVjsOZ4b3DI97vSMFyIFNiWaqA1ouArJlyPrih8WU8GQ3HFDYVFIZGlCsmc0wR0lSKbRfnMyumsasFTaY7wldSCQ0Fmd4/BEQKLE1HIsLiMU/iJBlG0XByEafjJI2HImHAL7GFYikoTP3mReL6Oc12Wz0b+9yvHVw3G6UWXs8oCghsLBQCUEnGlIGA5KwQzJZ6S6ZWOwxoYOKmUNsuYyULix2Jz90Y+QfPnUQ+LwO0xqHZ65a0nVUTzmbMsjvszK3TbSpflZKDaYYiIGNO2at+rEm4qawsi6ak9tlWl8rlxXUzE9I1OFwNRpxBEVB5n155ayO7W5WPtweVc1nUM2k3VcmZ6lbMWi1TZ72eHQEFOTaiOasqWSxppcu1rItRSx4uFS7CTJWPeKiRyyJk3AsPcawsnGN8VocXTEvv4gu2weJ9QMzWXClmzNELDpH+dl5J46z1QJsx+BKuZWU/4AFraOXug45qDRyvukf0bve9QhkgaBxyp9G53e+f4vwKbC/gJWwh7mF7e1BxqqplVpTc1QOV4gTaWbsz+DQ7Uhu/GbUX74naxta7h7b3QJ3Ft6bW9PCt31RqLLPO/HBRlAi8d7YETTX8Ao5c//z49SnOry07x3w0fJF56DE/l6CEOTLfWTm805CjQgu0sXbyVrebg0W72ZH/ZujH46j+/v8A/94P8PAXDoXF9ZcIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7a361d581de749f18aa8bc87193b6844"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="">f9d01dd2c31332002841b63b12d3aea1</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>7e301ab856bd409c9df7e6a547722b22</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>7e301ab8-56bd-409c-9df7-e6a547722b22</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Uy27bMBBFf8XgWhAkyzYc74q4Bgq0CZq02SQpQZEjmwD1KB+OXcP/3qEky4ITxFlk0QDVjsOZ4b3DI97vSMFyIDNiWaqA1ouArJlyPrih8UU8HQ8nFDYVFIZGlCsmc0wR0lSKbe/OZ1ZMY1cLmsx2hK+kEhoKMrt/DIgUWJqORYTFE57ESTKMouF0FKeTJI2HImHAL7CFYikoTP3hReL6Jc12W70Y+9qvHVw1G6UWXs84CghsLBQCUEnGlIGA5KwQzJZ6S2ZWOwxoYOK6UNsuYyULix2Jz90Y+QfPnUY+LwO0xqHZ65a0nVUTzubMslvszK3TbSpflZKDaYYiIGNO2ct+rEm4rqwsi6ak9tlWl8rlxVUzE9I1OFwNRpxBEVB5n155ayO7XZVPNweVC1nUM2k3VcmZ6lbMWi1TZ72eHQEFOTaiOasqWSxppcu1rItRSx4uFS7CTJVPeKiRyyJk3AsPcawsXGB8XofvmJbexTdsg8X7gJituVTMmKMXHCL97bySxlnrgTZj8CVcy8p+wgPW0MrdBx3VGjhedY/o3e5nhTJA0DjkTqNzu98/x/kN2I7gNWwh7mF7c1BxqqplVpTc1QOV4gTaebsz+DI/Uhu/G7Wjj0RtY+vDQ9t7oM7iW1NrevjWbyo1lllnHlwUJQLvnS1BU5SDhkD8+vz9Oc5vLTvHfDR8lXnoMb+QoIQ5Mt9ZObzTkKNCC7SxdvJWt5uDu3azI//d0I8nUf39/wH+vR/g8S8BoxsVlwgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7e301ab856bd409c9df7e6a547722b22"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="">9d09f99587003300663ca1bb36cb0ba3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>9d7bd913c2c34837abaec1ebe3307ec5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>9d7bd913-c2c3-4837-abae-c1ebe3307ec5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYYW/aPBD+K1E+U5YQINBvr1ohTdpWae36Ze9kObED1oyd2U47ivjvOydOYJBCWUFatU8o57Pv7rnnzme+Ln2B59S/9LVUBplFTv2O/4B50ciwTkFEmM45Xty7FewZ6T2BPMcK9huq/Muln84YJ4oK//Lrt47PCCgOSDDOxuPBKA6CKAqC4TBKcZgk0TBNgiQJ4QiOE8pB9RaseXeVBy1OlT+XYEOytP7+4LZe1UKpiHUl6vj0p6GCUPAhw1zTjj/HgmAj1aKRKIrJjeBrwYwJA6f5VvmnZk9gL+pZvYxCVCmt1ppP5ECpxNk1NvjWqCI1hXKqlbMa8Fg2YTbQtaDs3A9WnbX+k9XH2/qEbm4IV4A3oRkuuLn6M5vhsTZ71mYV4E1umISs+5HNC054Hb7kxVx8qnLpNx7et9CrWrl+hmWFBrBpbhNqM+TSld3O5OPnOhsTJkq/3CKXKebNFzZGsaQwFpelnxGUMcoJYoIzYS1B2ix9KKdzsIDmOM+ZmKJcyQdWngqxzLtTDh/djMtHiwWbii5ObeRdIBbuTkB+XYrvsWIWhY9wDGzuWIMz2OrsIZ0qlhv0yMiUmrX1WotI84j597Z1xzhUJ6oMz191fL3QVxxrvQYbaIp+FBaDCnqHHioTVW4pvfgPInigDijLAVd6qRSE2eD0Jg0WGjHyfwG1TJbLLznETQkKu2mhIAemCzWGp1StVrsd45ith5oKGexrKni80VSuNsNoC61uK9uyD20H1LVysvbSD4LgNA2mrQHsFuhR9blbeJaIr6i785TX8eyvIDhYApXa7+wHQFQ7ud3KQe6O93K3v8HdO2d/yx3H2PITlWu/M7bc5n2qFuob5WSMHb0lvr72ojjbfcA4MARVKdSyUCWUDyjlhS4XFBa6OusszZ1laA7AsRzMK5oCSTTCiqJMFoIgZ3hNfItqxpQ2Tnm3AD5TyLHwJJDHMzPqldpeo32oKMK9RZFsNvT3mVe77s7XHrjula57jevHBXrMbNk/YfM/9Ww5wYyX+AOL8o0EUqWkema+PJC6PRx44fD5QqfCkzr1+um0jfStU+oBX99ESzpHkynH+wrk3Ybxkqaw9+mIyUZTuLFJ95LF1suxMe7quxr6W67MiV3YujJ7/+aV+VeOeJ3nnmxnm/0Q0iKFlxhsy6B/wV5U96u6+QS7rK6eY4epnVKc9Ht4GEdhGARhQOJgFMfhaJhkQxz3sw1qX0thH0292HjWEWgzXu3IYVcd7xMpOcVii/R3AOC7ifPYkX7w111ub2JOLNjdNtKVqBXrc9VIwb4I9qOg7y3FRjTojUKSXoziML7oZ2R4MSZ4cIHHySCOCE372Sn/OPj2CzJ34IpKFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9d7bd913c2c34837abaec1ebe3307ec5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>79599b72-b807-403c-b20d-aab453848042</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>a20be0ffc9fd47a19494f7dd6f969b48</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>a20be0ff-c9fd-47a1-9494-f7dd6f969b48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227jNhCGX4XQtavKZzt3W7tBA2x2izjdolgsBIoc2WwpUSWpOK7hd+9Iom35ACdOEMDb5s4ccaiZ8fdzRl+XXkoT8K48SyMJYbloeA9U5oXxMWwOm4NuqxfCYwapCYOQSSoS3MKFySRdfHl6Z0Y1nmpBe1dLj82E5BpS7+rrt4YnOLo2h4OgF8Ud2g/arXYQDFrDYdQexsGgPwyavINHSBqBxK33RZC4PhazXWRHbR/rvuRT9UBpXsTTbHjwaCHlgIHEVBpoeAlNObVKLzYWDZR/TiUarM5xPROpLQ6cAbFUT8ESDQxPJNaFl9BHI/7BaAZB4R0DJsyK4LzaMnQVrMzxmFo6wfOZzbXbymZKMDBVqTjENJd2VLdVGz5nVqi0cqkiqLyVzJP0U1Upb3PA+g9DS24wCMiK9IuEXLbxZKbmd+sor0VaVso9lIpRuVlRa7WIclvEs/RAQoIHhQnNMpFOw0yrB1E6YyyJP5W48GOp5vhSI6apT1kRuI/Vpv412sel+QvVosjiFo9BZ4TEhIZpka1zK1/urRqeWZiRpMZsc8Tihn/nRYRVxi63sCpP4VIe9AFf/AAujVVjo4E5RUoTqv8KIaFC1oTQPCS+YOEZdAe9XhT1om6/vaV7yGLej+Ie7bN2je6blMmcA/l9HcaW9MPIHO6RUhJous86xvbjdVmnDeutM1l3Bgd7BRmxiuDfIheEkk1IhdGiFsrI8Be1RBhisO4+uVdEuKxqHg2yUDlJcmNxm8UnOzLy6wrqXK6CHADOOj5Kx3chsbeQEp2FJo/+BGZrKvq5bA1ARkVnIMvlbxkGBjxs+izXugAmzZMI9GpFfiC3NKVT0OQOilMQ2gMFvva4p6Tb5acaE7CadCebXI/l77Rq8K9Mp3tSnayNTqa90zKtOtCBSmsdJ7hcxfzPBREpvqip4Q+VawKO4XJYIjNqSASQ4k1YUUqiRXFXapJU+PrkV7zucb+GBwHz8t6tXGOlCQeLV7DxD6Xypu96Skf0pI7iVk1HP1UlOqiZU9DMJnJPP7/c337cqqf/sia3kU+v22333vXz6pktm/MW1yrLXG5lO3wLWVUjQ01VR9rAanUoiGdg2zmJLeM73yXl/HK3DmY/OIcvVywvyy34HsVj94TcjLcwB6+a2D4Yo5jASpjadDYXdobz1pFBq93axR7HNlEydhz/m+3jC5BB1RXPUEE8AarZ7FqALP7qak7w9tXB8P7T4R6TbrK7lM5T+959Tg+y6rRWfEgyqRYAfgnMMek80+vJ6er0Zz+ty0vt9IQyh3Nmqvb7THUBPYGDFIkogXi7foB4MPai656f5BGCGo+j0Q6P5QvP4bHzyinlHcjvCsjohUQ2T39/9upz8x6S0dlMdt+Z/I8z+e1ffsNByu0XAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a20be0ffc9fd47a19494f7dd6f969b48"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="">f8f2e9920b10030085c083eb37673abd</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>a86ce78009c64c8bbda829b513dce220</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>a86ce780-09c6-4c8b-bda8-29b513dce220</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1X227bMAz9FUPPaSbHsev0rVhQYMMuQC97aQpDkehEg3ypbHfNgvz7aEtOvKRNt64F1q0vRUWR1CF1jsxcLknKEiBHRFQQCVYC6ZEbpqratJwQxkuZpRNyNCEavgIvJ6Q3IbVfVC5yaDbQp2JqvdHYliuzrjSzCfzOchMr2KJoPAs+B1EpY/3JEik2BWXtK4QnZJErtvhiUaIlZxqLKEGToyXhc6mEhpQcXV71iBTowv14AKPRgE5dSj1KQ5/T0IOpdxgceiweYYrmEHQdV+CMTRt2G1PDRssamemDTNq9DzbJmXVoMr05Nw6ZFjVAv0fgtoRUACKLmSqgRxKWYqpML9YWDUx8TtXGMJdpaYpN2G0hvyOOIa39YsBauW3EehnZJhlzjDjYWakrvCltXfk8kxwK0yUBMatU+bZrMw6f8/rCTEjJpqqNzlSVpJ9Mh8g6QedOqgJBQF4XWiO3ZcRn8+zbaYvyRKZNT+ymyjhT6xUrSy2nVVnjWRJQkGCiKGF5LtNZlOvsRjbBiCXpzxQu+rHKvuGhhZylfcPcPvaV9U/QPm7MX5iWdRUfMQ0GI0wZ4b+YrD6ZYIuArHqkWBRvFSuKTYHY2ei6apyacm1hkelNHcK1zMtjPPUGbA2r3lpd7RkRz1Iha2RFR2jHzS4Up43EiuN0cXG5XF7kNb9E5PZ5pbFfZR95wmagV6urXRk8KsdDwhnuFQ5ARzinyPdio5q7C7YCWm9qG9QVz7HddNqMVjjD/cKpr+7XdBNS+qqcP1XOc4jEdGkji9vIHbmhPwgiuMVURUQjrphMdsm/x/Mhik/5Popz3qH4ucW3BdeSullGzd7PhG7CnE+s+xVwf/MrYNh9J5lfqfwXUlkDx5vuzlK7T/HqccPMYbiXsLT7JrcotlFZyoqMV01Dpdji7NjuOO/GG9LSp3qBvcELIq0p68Vz1rTg1wcVvMcCAzcM/mgGB6f1cDRcV1KDcOJMO+bdBeeeB/r3gh+SAAwDz8c/h7FH3YFLQwjCkI8o42EQ+EOvI4HNNNHWc2+h7XSPt5fOtif61milMHiyKd4N/qcXvJLnW102lp0+P9+8f5HK6wre1TwKBtNgRENxIGI6PRiGnn/AONADCFwffBFw3/We9+dALEGJR30GqLvvMyDCuzRwYk+7D4VVQLO8a5Jp4rcmmadTwguby/+v78LXrNLpHxGW7yUsdB/t9+awbb5uY3gMXb1Xuv67dL36AXF4pfrPFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a86ce78009c64c8bbda829b513dce220"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="">c1806bf4a70323008299b39f087901cb</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>b56e3fd06b2c4e058139393b72ee99fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>b56e3fd0-6b2c-4e05-8139-393b72ee99fa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X3W7jNhCFX4XQtavK/3bu0qRBA2x2gXW6RbFYCBQ5stlSokpScbyG371DibYV23DiBAGybe7MkUidGX9HM/q6DHKaQXAWWJpIiKtFK7ijsnTB+7g9bo/6nUEM9wXkJo5iJqnI8BYuTCHp4svjdxZU46kWdHC2DNhMSK4hD86+fmsFguPW9ngUDZK0R4dRt9ONolFnPE664zQaDcdRm/fwCEkTkHjrrROJ60Oa7aI4GPvQ3Es+1heU5k5PuxXAvYWcAwpJqTTQCjKac2qVXmwiGij/lEsMWF3ieiZy6w6cAbFUT8ESDQxPJNbLy+i9Ed9RzShyu1PAhJkTFzSWsa9gHU4vqaUTPJ/ZUvtb2UwJBqYuFYeUltJeNGP1DZ8KK1Reb6kV1LuVLLP8Y12pYHPA+g/DSGlQBBQufZeQzzadzNT881rllcirSvmLUjEqNytqrRZJaZ2eZQASMjwozmhRiHwaF1rdiWozasnCqcRFmEo1x4caMc1DypzwEKtNwyuMX1bhL1QLl8UNHoObERITG6ZFsc6teniwagVmYS4kNWabIxY3/qd0CuuMfW5xXR63pTroHB98Bz6NVWvjgTlFSjOq/44ho0I2jNDeJ96x8AS6o8EgSQZJf9jd0j1mKR8m6YAOWbdB93XOZMmB/LGWsSV9X5nHPVFKAs13WUdtP19Vddqw3jmRdR/wsNeQEasI/i1yQSjZSHJBi16olOEvaokwxGDdQ3KriPBZNXa0yEKVJCuNxdssXnlgo7DpoN7bdZAHwEcvD9LxQ1jsNaxEZ7Epk7+A2YaLfq1aA5AL1xnIcvl7gcKAx+2QlVo7YPIyS0CvVuQnckNzOgVNzguXJUK758CXHveYdfv8WGMC1rDuZJProfy9Vw3+lfl0x6qTddDbdHDcpnUH2nNpo+NEb9cx/3NDJIovGm74U5WagGe4GpbIjBqSAOTuJVtRSpKFe1dqknl8kQT3ds3VnDgBmDNJRU6xavj2vBMwD/d98noPesxB9KiD0k7DQb/UxdmrlvfOzGZyxzm/3d582Ppm+Lz2tjHOoN/vDt6d8+JprZjzDteqKHxuVSN8DUPVw0LDTwcawGq174YnYNs7ii3jD75Iqsnl81rMrjiPL1esrMot+A7Fl/4Kub7cwhy9aFY7N0YxgZUwjblsLuwMJ60DI1a38xB7HNhExdhh/K+3l9+ADep+eIIL0glQzWZXAqT7q+sJIdh1B8OhWsc7TPqZ7q30nMaX7lO6j1XHvRJCVki1AAgrYA5Z54m7Hp2rjn/w06a91IOeUOVwyjTVfZ+m3kBP4CBFJiogXq8fIB6MPet1z4/yCFGDx4uLBzxWDzyFx94Lp5R3IH8oIJNnEtk+/uU5aM7NO0gmJzPZf2fyP87kt38BjMXXCucXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b56e3fd06b2c4e058139393b72ee99fa"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=348c66d572594ab4ac26a4370f806663^sys_idNOT IN79599b72b807403cb20daab453848042,a25ee7d61cbc4e47a58ec58e13f403f0"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">afe5ac30939bc750295afc8bdd03d6ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>79599b72b807403cb20daab453848042</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>79599b72-b807-403c-b20d-aab453848042</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn26AkP2TfAgcBAqQN0AS5tIGwfMhmS5GqSCVRBf97l5JsB6mLpk2PvYlD7nJmtCO1xNa+rL27tWfOqY0hq0/3I6JMwPC5JUqQFSEjYqCQ+MStEcoraxB6AF0HrG0hnXO5SOmYLvl8POUpGzMB6TheslmUCC7jmE6gLCuLNZnz4OVu97mmNBGV/CK5lwL7CeVKDc3dP27Lt0rjepBWQoVKvKzIqn2x1UnNKeTRkkc8iedJTGmcTiM2T1gUiwQkRNhQA5Maj66feXHCHt+UAXK+UmYzrK+G0ps9aCsRqMR0ROSTl0Yg5VUO2skRKcAI8LZqyMpXNQKVBHFtdHM4sVXG96+ngCenvsvQidJwMpeoi8t+97DMBo97OD8HD0il5r6uhqN8axWXrndEyBxq7dfPsf7Addmp7Eo8ML2vtrouzIfeDHJosH+liNQOScgyKA3cByH5zdY+ftyzvFCmc2XY1JaDPqzAo3es9oFPS6SWBTbKChwDdDQLs6C6YuRSTDYaF5Nc20e8NMz3BHggPkFjYXKB+HkH30Glgor32AaLcRZc5nilyr227nKyGxHXuLUG544a0dzsWx0Y9ooHbVlvTyjpGp3hxQ9ykLEbtSSwurIbxS8Nji7KvmncZRjBxXK2XLJFzFK6mNKEs5gKADadJek0pdOYvG5U4xNjmXXAMbo/p468OSLxqYi86yf/14z+JC3Rb9IyIK+Ky2z2Py1vTkugycApnnV/DmwXPlh/GZfB9AsltTg5QqfydB9mumd1eBtcOSy7Ddjl/ocWNhocuZC6I/Roq69B9hHb/QB7OHuqGgcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">17e5ac30939bc750295afc8bdd03d6e7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:19</sys_created_on>
+        <sys_id>a25ee7d61cbc4e47a58ec58e13f403f0</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:30</sys_updated_on>
+        <ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn26Aky69bkCCAgbQBmiCXNhBW5MomSomqSCVRBf97l5JsB4mLpI9jDwakIXc5M9yxWmZqV9bO3poza9WmYKsv9yOmCo/Rc8uUZCvGRqyAHOlJmEIqp0xB0APo2mNtC4uZwPmCj/lSzMZTsUjHqYTFOFymcRBJgWHIJ1CWlaGaxDpwuNt9rTmPZI+ipH5S2VJDc/eP24qt0rLCQVoJFSlxWLFV+2Kpk7qEOIsDHosonEUh5+FiGqSzKA1CGQFOZ9RQQ4qatp4/8+KEPa4pPWRdpYrN8H41lN7sQVNJTyXkI4ZPDgtJlFcZaIsjlkMhwZmqYStX1QRUCPK60M1hx1YVrr+eHJ6s+oG+E+d+Z4akS2C/enhNBo97OLsAB0SlFq6uhq1ia5RA2zsiMYNau/PnWL/huuxUdiUOUr2vNrrOi0+9GezQYH+lhNSWSGDplXrug5DsZmseP+9ZXqqic2VY1EaAPryBI+/S2nk+LUONOTVKcrpwcjTxt666YuKSTzaaXiaZNo90qJ/vCQhPfELGwuSS8IsOvoNKeRUfqQ0V0yzYxIpKlXtt3eFsN2K2secarD1qJHOT77Vn2CsetCW9Pb6ka3RGBz/gIGM3aplndWU2SqwLGl2SfdPYtR9BCGPEuZwFIhVTnM4hXqCgXxBlUx5lnA2jmnHIgqUITo8qRCfGMumAY3Rfp469HZF3nPsqIh/6yf81o99JS/BGWgbkXXGJ4/9p+eu0eJopWCWS7stB7fwf1h/GZTD9UqGWJ0foVJ7u/Uz3rA63IZSlsluPrfcfNL/Q0Mj51B2hR1N987KP2O4nUyTcCxoHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=348c66d572594ab4ac26a4370f806663"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:29</sys_created_on>
+        <sys_id>83e5ac30939bc750295afc8bdd03d65a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:29</sys_created_on>
+        <sys_id>8fe5ac30939bc750295afc8bdd03d693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:29</sys_created_on>
+        <sys_id>c7e5ac30939bc750295afc8bdd03d670</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:29</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_348c66d572594ab4ac26a4370f806663"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_348c66d572594ab4ac26a4370f806663"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes/>
+        <authored_on_release_version>-1</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>expense_claim_approval_workflow</internal_name>
+        <label_cache>[{"name":"Updated_1.current.manager","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Manager","type":"string","base_type":"string","usedInstances":{"9d7bd913-c2c3-4837-abae-c1ebe3307ec5":["conditions"],"a86ce780-09c6-4c8b-bda8-29b513dce220":["approval_conditions"]},"attributes":{}},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Number","type":"string","base_type":"string","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["ah_subject"],"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["ah_subject"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["ah_subject"]},"attributes":{}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record","type":"reference","base_type":"reference","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["record"],"a86ce780-09c6-4c8b-bda8-29b513dce220":["record"],"7e301ab8-56bd-409c-9df7-e6a547722b22":["record"],"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["record"],"7a361d58-1de7-49f1-8aa8-bc87193b6844":["record"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["record"]},"attributes":{}},{"name":"9d7bd913-c2c3-4837-abae-c1ebe3307ec5.Record.email","label":"9d7bd913-c2c3-4837-abae-c1ebe3307ec5➛Record➛email","type":"string","base_type":"string","usedInstances":{"687f7050-3202-4677-a449-dddf8ca1463f":["ah_to"]},"attributes":{}},{"name":"a86ce780-09c6-4c8b-bda8-29b513dce220.approval_state","label":"a86ce780-09c6-4c8b-bda8-29b513dce220➛approval_state","type":"choice","base_type":"choice","usedInstances":{"a25ee7d6-1cbc-4e47-a58e-c58e13f403f0":["condition"],"79599b72-b807-403c-b20d-aab453848042":["condition"]},"attributes":{}},{"name":"Updated_1.current.employee.email","label":"Trigger - Record Updated➛x_1918526_expens_0_claim Record➛Employee➛Email","type":"string","base_type":"string","usedInstances":{"b56e3fd0-6b2c-4e05-8139-393b72ee99fa":["ah_to"],"a20be0ff-c9fd-47a1-9494-f7dd6f969b48":["ah_to"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Expense Claim Approval Workflow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Expense Claim Approval Workflow">348c66d572594ab4ac26a4370f806663</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f3e5ec30939bc750295afc8bdd03d6a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f3e5ec30939bc750295afc8bdd03d6a4^sys_idNOT IN3be5ec30939bc750295afc8bdd03d6a6"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f3e5ec30939bc750295afc8bdd03d6a4</id>
+        <name>Expense Claim Approval Workflow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>3be5ec30939bc750295afc8bdd03d6a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3be5ec30939bc750295afc8bdd03d6a6"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f3e5ec30939bc750295afc8bdd03d6a4^sys_idNOT IN7fe5ec30939bc750295afc8bdd03d6a8,7fe5ec30939bc750295afc8bdd03d6c4,80f5ec30939bc750295afc8bdd03d6cf"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</model>
+        <model_id>f3e5ec30939bc750295afc8bdd03d6a4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>7fe5ec30939bc750295afc8bdd03d6a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7fe5ec30939bc750295afc8bdd03d6a8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</model>
+        <model_id>f3e5ec30939bc750295afc8bdd03d6a4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>7fe5ec30939bc750295afc8bdd03d6c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7fe5ec30939bc750295afc8bdd03d6c4"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</model>
+        <model_id>f3e5ec30939bc750295afc8bdd03d6a4</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>80f5ec30939bc750295afc8bdd03d6cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=80f5ec30939bc750295afc8bdd03d6cf"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f3e5ec30939bc750295afc8bdd03d6a4^sys_idNOT IN88f52070939bc750295afc8bdd03d630"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>88f52070939bc750295afc8bdd03d630</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/+1Y32/bNhD+VwQ9dYAHOBs6bHnr1gUI0K5Ak7UPWSHQ5MkmSpMeebKtBfnfe5Qom5HkRG3kpUXzlOj44767+z6S56vrFK2cz8Gea4dMc7go3blIT9N0kio2A0X/XrKZAvqWGsFqpi7LFZAZvTnTbOnHBKxAC9BYL+ULIzm8ko6+rz5M0iXTgqGxZXqKtoBJmluzvITlSjGkvXKmHBmNFWDT05PpdJJW+wYntOGaqcJ/b7OT305+ff7TLxlsyaPLphlXTC49BOlou/Ld/TP5QiphQdfYVsySL/Serzsxt2BgT+gBNWGGLfokiF1AUdjBYoGJN1qV0ZStk/9Btb5wkEWJDDPyi4XZvIUcCDGHM6krd2FQGc7U7oshVXNWIDiK5eZml5MzCSoU1XErV/iCo1w3ib+ZDGHB20In7xegk78d2KQqbYcScyUFZKoeG06JJtD7OFGRIIIWimMLnW0IWUb5s433hjBdYgwjQG+4dznEnhR8rdRImVj7Mvs8ej2mx+LKBTgnjf+LKPW8y5iaFfew5TrNm+JVy1mNiOJ/FRz6vCXea25sXbHz/cQGhV9wvmTzQIL8AhRwjGqS08ro67WkZQR6H/kOhjY6GwLlL6N/PC6SmcFF7L7x/DvZbyWB+HYIjnsgni9Tc1tMbseR9e3YWvoN1s/RcJeGh51ji5jfs4ZzZTZEoofLlumyQ1K/t9TEyzLhhrbf4oiyIAnA3JpCi0N+b88YS42Mf7zb7X5G8kxAzgqFPzy2/Dw2Os5i5cVxtPUXjw1U4Z5IvW6fNLdP1Rud/BmCTqpXqHu4/CqsLULSccgLSwnA6mpoEp1g43M0KXpL1zvdkhGE5oH9qDqgS33Ht70WGvwtGTTmgQroLetB30+CqDP3h9FCYv1iamugGXJH6TVCaXgEoCFE1UZmhBkL908xnf4sXDFbSkToOS3vnjyAPHEKekBhTzaOxpbQu38pWTZMo8vQZEyILEK8O6CWRoB6GdUyMIRuiVWBLr2JKk2K2TXmx+x0R2td+t5A9FD37x/fR4544hoNmcl7mxKZJyEBdA7NygQXQCgU3cS0V4VjzKNfG1+mNpiXJqGBxP4vcMbpTapGv9ug1CVtKb42fvZPDId7k5bzp7thn77LetbDxVlo+W8BGV8wPa9fPw1bz0ijwPgiqack9ZRR1cpbPyDwMbeHNdiyE5A3JsVKeAGM54upDStd5+AhlXvBh7ceGYjauibzo0m7uVkcWpo5LyNVh4K0ZB2sA3W9J+Zhf9+KkIfr9sMngIH9SFAYAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f3e5ec30939bc750295afc8bdd03d6a4^sys_idNOT IN0cf52070939bc750295afc8bdd03d628,0cf52070939bc750295afc8bdd03d62d,48f52070939bc750295afc8bdd03d62a,84f52070939bc750295afc8bdd03d601,88f52070939bc750295afc8bdd03d62b,88f5ec30939bc750295afc8bdd03d6fe,c8f52070939bc750295afc8bdd03d62c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>0cf52070939bc750295afc8bdd03d628</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>a86ce780-09c6-4c8b-bda8-29b513dce220</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1X227bMAz9FUPPaSbHsev0rVhQYMMuQC97aQpDkehEg3ypbHfNgvz7aEtOvKRNt64F1q0vRUWR1CF1jsxcLknKEiBHRFQQCVYC6ZEbpqratJwQxkuZpRNyNCEavgIvJ6Q3IbVfVC5yaDbQp2JqvdHYliuzrjSzCfzOchMr2KJoPAs+B1EpY/3JEik2BWXtK4QnZJErtvhiUaIlZxqLKEGToyXhc6mEhpQcXV71iBTowv14AKPRgE5dSj1KQ5/T0IOpdxgceiweYYrmEHQdV+CMTRt2G1PDRssamemDTNq9DzbJmXVoMr05Nw6ZFjVAv0fgtoRUACKLmSqgRxKWYqpML9YWDUx8TtXGMJdpaYpN2G0hvyOOIa39YsBauW3EehnZJhlzjDjYWakrvCltXfk8kxwK0yUBMatU+bZrMw6f8/rCTEjJpqqNzlSVpJ9Mh8g6QedOqgJBQF4XWiO3ZcRn8+zbaYvyRKZNT+ymyjhT6xUrSy2nVVnjWRJQkGCiKGF5LtNZlOvsRjbBiCXpzxQu+rHKvuGhhZylfcPcPvaV9U/QPm7MX5iWdRUfMQ0GI0wZ4b+YrD6ZYIuArHqkWBRvFSuKTYHY2ei6apyacm1hkelNHcK1zMtjPPUGbA2r3lpd7RkRz1Iha2RFR2jHzS4Up43EiuN0cXG5XF7kNb9E5PZ5pbFfZR95wmagV6urXRk8KsdDwhnuFQ5ARzinyPdio5q7C7YCWm9qG9QVz7HddNqMVjjD/cKpr+7XdBNS+qqcP1XOc4jEdGkji9vIHbmhPwgiuMVURUQjrphMdsm/x/Mhik/5Popz3qH4ucW3BdeSullGzd7PhG7CnE+s+xVwf/MrYNh9J5lfqfwXUlkDx5vuzlK7T/HqccPMYbiXsLT7JrcotlFZyoqMV01Dpdji7NjuOO/GG9LSp3qBvcELIq0p68Vz1rTg1wcVvMcCAzcM/mgGB6f1cDRcV1KDcOJMO+bdBeeeB/r3gh+SAAwDz8c/h7FH3YFLQwjCkI8o42EQ+EOvI4HNNNHWc2+h7XSPt5fOtif61milMHiyKd4N/qcXvJLnW102lp0+P9+8f5HK6wre1TwKBtNgRENxIGI6PRiGnn/AONADCFwffBFw3/We9+dALEGJR30GqLvvMyDCuzRwYk+7D4VVQLO8a5Jp4rcmmadTwguby/+v78LXrNLpHxGW7yUsdB/t9+awbb5uY3gMXb1Xuv67dL36AXF4pfrPFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0cf52070939bc750295afc8bdd03d628"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>9</order>
+        <parent_ui_id>79599b72-b807-403c-b20d-aab453848042</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>0cf52070939bc750295afc8bdd03d62d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>a20be0ff-c9fd-47a1-9494-f7dd6f969b48</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X227jNhCGX4XQtavKZzt3W7tBA2x2izjdolgsBIoc2WwpUSWpOK7hd+9Iom35ACdOEMDb5s4ccaiZ8fdzRl+XXkoT8K48SyMJYbloeA9U5oXxMWwOm4NuqxfCYwapCYOQSSoS3MKFySRdfHl6Z0Y1nmpBe1dLj82E5BpS7+rrt4YnOLo2h4OgF8Ud2g/arXYQDFrDYdQexsGgPwyavINHSBqBxK33RZC4PhazXWRHbR/rvuRT9UBpXsTTbHjwaCHlgIHEVBpoeAlNObVKLzYWDZR/TiUarM5xPROpLQ6cAbFUT8ESDQxPJNaFl9BHI/7BaAZB4R0DJsyK4LzaMnQVrMzxmFo6wfOZzbXbymZKMDBVqTjENJd2VLdVGz5nVqi0cqkiqLyVzJP0U1Upb3PA+g9DS24wCMiK9IuEXLbxZKbmd+sor0VaVso9lIpRuVlRa7WIclvEs/RAQoIHhQnNMpFOw0yrB1E6YyyJP5W48GOp5vhSI6apT1kRuI/Vpv412sel+QvVosjiFo9BZ4TEhIZpka1zK1/urRqeWZiRpMZsc8Tihn/nRYRVxi63sCpP4VIe9AFf/AAujVVjo4E5RUoTqv8KIaFC1oTQPCS+YOEZdAe9XhT1om6/vaV7yGLej+Ie7bN2je6blMmcA/l9HcaW9MPIHO6RUhJous86xvbjdVmnDeutM1l3Bgd7BRmxiuDfIheEkk1IhdGiFsrI8Be1RBhisO4+uVdEuKxqHg2yUDlJcmNxm8UnOzLy6wrqXK6CHADOOj5Kx3chsbeQEp2FJo/+BGZrKvq5bA1ARkVnIMvlbxkGBjxs+izXugAmzZMI9GpFfiC3NKVT0OQOilMQ2gMFvva4p6Tb5acaE7CadCebXI/l77Rq8K9Mp3tSnayNTqa90zKtOtCBSmsdJ7hcxfzPBREpvqip4Q+VawKO4XJYIjNqSASQ4k1YUUqiRXFXapJU+PrkV7zucb+GBwHz8t6tXGOlCQeLV7DxD6Xypu96Skf0pI7iVk1HP1UlOqiZU9DMJnJPP7/c337cqqf/sia3kU+v22333vXz6pktm/MW1yrLXG5lO3wLWVUjQ01VR9rAanUoiGdg2zmJLeM73yXl/HK3DmY/OIcvVywvyy34HsVj94TcjLcwB6+a2D4Yo5jASpjadDYXdobz1pFBq93axR7HNlEydhz/m+3jC5BB1RXPUEE8AarZ7FqALP7qak7w9tXB8P7T4R6TbrK7lM5T+959Tg+y6rRWfEgyqRYAfgnMMek80+vJ6er0Zz+ty0vt9IQyh3Nmqvb7THUBPYGDFIkogXi7foB4MPai656f5BGCGo+j0Q6P5QvP4bHzyinlHcjvCsjohUQ2T39/9upz8x6S0dlMdt+Z/I8z+e1ffsNByu0XAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0cf52070939bc750295afc8bdd03d62d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>48f52070939bc750295afc8bdd03d62a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>7e301ab8-56bd-409c-9df7-e6a547722b22</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Uy27bMBBFf8XgWhAkyzYc74q4Bgq0CZq02SQpQZEjmwD1KB+OXcP/3qEky4ITxFlk0QDVjsOZ4b3DI97vSMFyIDNiWaqA1ouArJlyPrih8UU8HQ8nFDYVFIZGlCsmc0wR0lSKbe/OZ1ZMY1cLmsx2hK+kEhoKMrt/DIgUWJqORYTFE57ESTKMouF0FKeTJI2HImHAL7CFYikoTP3hReL6Jc12W70Y+9qvHVw1G6UWXs84CghsLBQCUEnGlIGA5KwQzJZ6S2ZWOwxoYOK6UNsuYyULix2Jz90Y+QfPnUY+LwO0xqHZ65a0nVUTzubMslvszK3TbSpflZKDaYYiIGNO2ct+rEm4rqwsi6ak9tlWl8rlxVUzE9I1OFwNRpxBEVB5n155ayO7XZVPNweVC1nUM2k3VcmZ6lbMWi1TZ72eHQEFOTaiOasqWSxppcu1rItRSx4uFS7CTJVPeKiRyyJk3AsPcawsXGB8XofvmJbexTdsg8X7gJituVTMmKMXHCL97bySxlnrgTZj8CVcy8p+wgPW0MrdBx3VGjhedY/o3e5nhTJA0DjkTqNzu98/x/kN2I7gNWwh7mF7c1BxqqplVpTc1QOV4gTaebsz+DI/Uhu/G7Wjj0RtY+vDQ9t7oM7iW1NrevjWbyo1lllnHlwUJQLvnS1BU5SDhkD8+vz9Oc5vLTvHfDR8lXnoMb+QoIQ5Mt9ZObzTkKNCC7SxdvJWt5uDu3azI//d0I8nUf39/wH+vR/g8S8BoxsVlwgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=48f52070939bc750295afc8bdd03d62a"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>84f52070939bc750295afc8bdd03d601</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>687f7050-3202-4677-a449-dddf8ca1463f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Y227jNhCGX4XQtaPKlo+5y8YNGmA3W8Tp9mKxEChyFLOlRC1JxXEDv3tHlGzLBzgnZOFtc2eNxNHM8Ps5I3998DKagnfqWRpLiNxFy7ujsiiN91F71B72Ov0I7nPITBRETFKR4iNcmFzS+ZfHn8ypRq8WtHf64LGpkFxD5p1+/dbyBMel7dEw6MdJlw6CsBMGwbAzGsXhKAmGg1HQ5l10IWkMEh+9KYPE630x23m+1/axuZZcVTeU5mU87ZYH9xYyDhhIQqWBlpfSjFOr9Hxl0UD550yiweoCr6cis6XDKRBL9S1YooGhR2Lr8FJ6b8Q/GM0wKFcngAmzMjivcRnVFazMyZhaOkH/zBa6fpRNlWBgqlJxSGgh7XnTVj3wObdCZdWSKoJqtZJFml1VlfJWDpYbhpbCYBCQl+mXCdXZJpOpml0vo7wQmatUfVMqRuXqilqrRVzYMp4HDySk6ChKaZ6L7DbKtboTbjHGkvq3Ei/8RKoZvtSI28ynrAzcx2pT/wLtY2f+QrUos/iEbnAxQmIiw7TIl7m5l3uLlmfm5lxSY9Y5YnGj70UZYZVxnVtUladc4hyd4YvvoE5j0VppYEaR0pTqvyNIqZANIbR3iS9ZeALdQb8fx/24NwjXdI9Ywgdx0qcDFjbovsyYLDiQP5dhrEnfjazGPVZKAs22WcfYfrlwdVqx3nkm67Whhr2CjFhFcFvknFCyCqk0WtSCiwx/UUuEIQbr7pMbRUSdVWNFi8xVQdLCWHzM4p0NGflNBXWPV0E1ALV1vJeOn0JibyElOo1MEf8FzDZU9KtrDUDOy85AHh7+yDEw4FHbZ4XWJTBZkcagFwtyQs7yMjsqyTV8L4RGanck+Gp/j4m3xw+1JmAN8U5W2e6rQK1Wg5uZ3W6JdbI01kLtHxZq1YN2dNroOcHxauZ/LolY8XlDD2cZgRphNyyRKTUkBsgIkpMKiywT3Hg8Fx2xpjw2dXkAO5B98jse/bhWw52AmTuDKzciIxPQd7hLV2rm7+rmh733MX3Rg/pKOg19fahKt1PLWllTm8otXf128+njWlWDl7W/laz6vV7Yf9fVq6e5fMY7XKs8r3NzjfIt5FYNEw217ekPi8WuOJ6AbfcgtoxvfLG4yeZ6Gcx2cDW+XLHClVvwLYrH9R1yOV7DHLxqljszRjGBlTCNuW0m7BQnsT0jWNjZxB4HOuEY24//5fr2Ecig6pbPUEEyAarZ9EKALLe6GiC8bXUwPAF1tMVkPfMdS0dqfAk/pTdZtaGVEX6h8FE7PGEdFp50h+HghMYUTlgbYgjDYACs51dY+46gfVp6qZtH57LDfxnQpgDVRtdwWT5nGgvfp7Ej6BocpMDBxDl6s46BeDD2oobAD/IIQYPH8/MNHt0Ln8Nj95VzzDuQPxWQ8QuJbB/+cu03J+stJONnM9l7Z/I/zuS3fwG6+t5tKRgAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=84f52070939bc750295afc8bdd03d601"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>88f52070939bc750295afc8bdd03d62b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>b56e3fd0-6b2c-4e05-8139-393b72ee99fa</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2X3W7jNhCFX4XQtavK/3bu0qRBA2x2gXW6RbFYCBQ5stlSokpScbyG371DibYV23DiBAGybe7MkUidGX9HM/q6DHKaQXAWWJpIiKtFK7ijsnTB+7g9bo/6nUEM9wXkJo5iJqnI8BYuTCHp4svjdxZU46kWdHC2DNhMSK4hD86+fmsFguPW9ngUDZK0R4dRt9ONolFnPE664zQaDcdRm/fwCEkTkHjrrROJ60Oa7aI4GPvQ3Es+1heU5k5PuxXAvYWcAwpJqTTQCjKac2qVXmwiGij/lEsMWF3ieiZy6w6cAbFUT8ESDQxPJNbLy+i9Ed9RzShyu1PAhJkTFzSWsa9gHU4vqaUTPJ/ZUvtb2UwJBqYuFYeUltJeNGP1DZ8KK1Reb6kV1LuVLLP8Y12pYHPA+g/DSGlQBBQufZeQzzadzNT881rllcirSvmLUjEqNytqrRZJaZ2eZQASMjwozmhRiHwaF1rdiWozasnCqcRFmEo1x4caMc1DypzwEKtNwyuMX1bhL1QLl8UNHoObERITG6ZFsc6teniwagVmYS4kNWabIxY3/qd0CuuMfW5xXR63pTroHB98Bz6NVWvjgTlFSjOq/44ho0I2jNDeJ96x8AS6o8EgSQZJf9jd0j1mKR8m6YAOWbdB93XOZMmB/LGWsSV9X5nHPVFKAs13WUdtP19Vddqw3jmRdR/wsNeQEasI/i1yQSjZSHJBi16olOEvaokwxGDdQ3KriPBZNXa0yEKVJCuNxdssXnlgo7DpoN7bdZAHwEcvD9LxQ1jsNaxEZ7Epk7+A2YaLfq1aA5AL1xnIcvl7gcKAx+2QlVo7YPIyS0CvVuQnckNzOgVNzguXJUK758CXHveYdfv8WGMC1rDuZJProfy9Vw3+lfl0x6qTddDbdHDcpnUH2nNpo+NEb9cx/3NDJIovGm74U5WagGe4GpbIjBqSAOTuJVtRSpKFe1dqknl8kQT3ds3VnDgBmDNJRU6xavj2vBMwD/d98noPesxB9KiD0k7DQb/UxdmrlvfOzGZyxzm/3d582Ppm+Lz2tjHOoN/vDt6d8+JprZjzDteqKHxuVSN8DUPVw0LDTwcawGq174YnYNs7ii3jD75Iqsnl81rMrjiPL1esrMot+A7Fl/4Kub7cwhy9aFY7N0YxgZUwjblsLuwMJ60DI1a38xB7HNhExdhh/K+3l9+ADep+eIIL0glQzWZXAqT7q+sJIdh1B8OhWsc7TPqZ7q30nMaX7lO6j1XHvRJCVki1AAgrYA5Z54m7Hp2rjn/w06a91IOeUOVwyjTVfZ+m3kBP4CBFJiogXq8fIB6MPet1z4/yCFGDx4uLBzxWDzyFx94Lp5R3IH8oIJNnEtk+/uU5aM7NO0gmJzPZf2fyP87kt38BjMXXCucXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=88f52070939bc750295afc8bdd03d62b"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>88f5ec30939bc750295afc8bdd03d6fe</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>9d7bd913-c2c3-4837-abae-c1ebe3307ec5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYYW/aPBD+K1E+U5YQINBvr1ohTdpWae36Ze9kObED1oyd2U47ivjvOydOYJBCWUFatU8o57Pv7rnnzme+Ln2B59S/9LVUBplFTv2O/4B50ciwTkFEmM45Xty7FewZ6T2BPMcK9huq/Muln84YJ4oK//Lrt47PCCgOSDDOxuPBKA6CKAqC4TBKcZgk0TBNgiQJ4QiOE8pB9RaseXeVBy1OlT+XYEOytP7+4LZe1UKpiHUl6vj0p6GCUPAhw1zTjj/HgmAj1aKRKIrJjeBrwYwJA6f5VvmnZk9gL+pZvYxCVCmt1ppP5ECpxNk1NvjWqCI1hXKqlbMa8Fg2YTbQtaDs3A9WnbX+k9XH2/qEbm4IV4A3oRkuuLn6M5vhsTZ71mYV4E1umISs+5HNC054Hb7kxVx8qnLpNx7et9CrWrl+hmWFBrBpbhNqM+TSld3O5OPnOhsTJkq/3CKXKebNFzZGsaQwFpelnxGUMcoJYoIzYS1B2ix9KKdzsIDmOM+ZmKJcyQdWngqxzLtTDh/djMtHiwWbii5ObeRdIBbuTkB+XYrvsWIWhY9wDGzuWIMz2OrsIZ0qlhv0yMiUmrX1WotI84j597Z1xzhUJ6oMz191fL3QVxxrvQYbaIp+FBaDCnqHHioTVW4pvfgPInigDijLAVd6qRSE2eD0Jg0WGjHyfwG1TJbLLznETQkKu2mhIAemCzWGp1StVrsd45ith5oKGexrKni80VSuNsNoC61uK9uyD20H1LVysvbSD4LgNA2mrQHsFuhR9blbeJaIr6i785TX8eyvIDhYApXa7+wHQFQ7ud3KQe6O93K3v8HdO2d/yx3H2PITlWu/M7bc5n2qFuob5WSMHb0lvr72ojjbfcA4MARVKdSyUCWUDyjlhS4XFBa6OusszZ1laA7AsRzMK5oCSTTCiqJMFoIgZ3hNfItqxpQ2Tnm3AD5TyLHwJJDHMzPqldpeo32oKMK9RZFsNvT3mVe77s7XHrjula57jevHBXrMbNk/YfM/9Ww5wYyX+AOL8o0EUqWkema+PJC6PRx44fD5QqfCkzr1+um0jfStU+oBX99ESzpHkynH+wrk3Ybxkqaw9+mIyUZTuLFJ95LF1suxMe7quxr6W67MiV3YujJ7/+aV+VeOeJ3nnmxnm/0Q0iKFlxhsy6B/wV5U96u6+QS7rK6eY4epnVKc9Ht4GEdhGARhQOJgFMfhaJhkQxz3sw1qX0thH0292HjWEWgzXu3IYVcd7xMpOcVii/R3AOC7ifPYkX7w111ub2JOLNjdNtKVqBXrc9VIwb4I9qOg7y3FRjTojUKSXoziML7oZ2R4MSZ4cIHHySCOCE372Sn/OPj2CzJ34IpKFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=88f5ec30939bc750295afc8bdd03d6fe"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>79599b72-b807-403c-b20d-aab453848042</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>c8f52070939bc750295afc8bdd03d62c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>7a361d58-1de7-49f1-8aa8-bc87193b6844</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2Uy27bMBBFf8XgWhAkKzYc74q4Bgq0CZq03qQpQZEjmwX1KB+OXcP/3qEky4ITxFlk0QDVjsOZ4b3DI97vSMFyIFNiWaqA1ouArJlyPrih8WU8GQ3HFDYVFIZGlCsmc0wR0lSKbRfnMyumsasFTaY7wldSCQ0Fmd4/BEQKLE1HIsLiMU/iJBlG0XByEafjJI2HImHAL7GFYikoTP3mReL6Oc12Wz0b+9yvHVw3G6UWXs8oCghsLBQCUEnGlIGA5KwQzJZ6S6ZWOwxoYOKmUNsuYyULix2Jz90Y+QfPnUQ+LwO0xqHZ65a0nVUTzmbMsjvszK3TbSpflZKDaYYiIGNO2at+rEm4qawsi6ak9tlWl8rlxXUzE9I1OFwNRpxBEVB5n155ayO7W5WPtweVc1nUM2k3VcmZ6lbMWi1TZ72eHQEFOTaiOasqWSxppcu1rItRSx4uFS7CTJWPeKiRyyJk3AsPcawsnGN8VocXTEvv4gu2weJ9QMzWXClmzNELDpH+dl5J46z1QJsx+BKuZWU/4AFraOXug45qDRyvukf0bve9QhkgaBxyp9G53e+f4vwKbC/gJWwh7mF7e1BxqqplVpTc1QOV4gTaWbsz+DQ7Uhu/GbUX74naxta7h7b3QJ3Ft6bW9PCt31RqLLPO/HBRlAi8d7YETTX8Ao5c//z49SnOry07x3w0fJF56DE/l6CEOTLfWTm805CjQgu0sXbyVrebg0W72ZH/ZujH46j+/v8A/94P8PAXDoXF9ZcIAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c8f52070939bc750295afc8bdd03d62c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f3e5ec30939bc750295afc8bdd03d6a4^sys_idNOT IN40f5ec30939bc750295afc8bdd03d6fa,c0f5ec30939bc750295afc8bdd03d6fc"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">17e5ac30939bc750295afc8bdd03d6e7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>40f5ec30939bc750295afc8bdd03d6fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>a25ee7d6-1cbc-4e47-a58e-c58e13f403f0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn26Aky69bkCCAgbQBmiCXNhBW5MomSomqSCVRBf97l5JsB4mLpI9jDwakIXc5M9yxWmZqV9bO3poza9WmYKsv9yOmCo/Rc8uUZCvGRqyAHOlJmEIqp0xB0APo2mNtC4uZwPmCj/lSzMZTsUjHqYTFOFymcRBJgWHIJ1CWlaGaxDpwuNt9rTmPZI+ipH5S2VJDc/eP24qt0rLCQVoJFSlxWLFV+2Kpk7qEOIsDHosonEUh5+FiGqSzKA1CGQFOZ9RQQ4qatp4/8+KEPa4pPWRdpYrN8H41lN7sQVNJTyXkI4ZPDgtJlFcZaIsjlkMhwZmqYStX1QRUCPK60M1hx1YVrr+eHJ6s+oG+E+d+Z4akS2C/enhNBo97OLsAB0SlFq6uhq1ia5RA2zsiMYNau/PnWL/huuxUdiUOUr2vNrrOi0+9GezQYH+lhNSWSGDplXrug5DsZmseP+9ZXqqic2VY1EaAPryBI+/S2nk+LUONOTVKcrpwcjTxt666YuKSTzaaXiaZNo90qJ/vCQhPfELGwuSS8IsOvoNKeRUfqQ0V0yzYxIpKlXtt3eFsN2K2secarD1qJHOT77Vn2CsetCW9Pb6ka3RGBz/gIGM3aplndWU2SqwLGl2SfdPYtR9BCGPEuZwFIhVTnM4hXqCgXxBlUx5lnA2jmnHIgqUITo8qRCfGMumAY3Rfp469HZF3nPsqIh/6yf81o99JS/BGWgbkXXGJ4/9p+eu0eJopWCWS7stB7fwf1h/GZTD9UqGWJ0foVJ7u/Uz3rA63IZSlsluPrfcfNL/Q0Mj51B2hR1N987KP2O4nUyTcCxoHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">afe5ac30939bc750295afc8bdd03d6ed</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Expense Claim Approval Workflow">f3e5ec30939bc750295afc8bdd03d6a4</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:33</sys_created_on>
+        <sys_id>c0f5ec30939bc750295afc8bdd03d6fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:33</sys_updated_on>
+        <ui_id>79599b72-b807-403c-b20d-aab453848042</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn26AkP2TfAgcBAqQN0AS5tIGwfMhmS5GqSCVRBf97l5JsB6mLpk2PvYlD7nJmtCO1xNa+rL27tWfOqY0hq0/3I6JMwPC5JUqQFSEjYqCQ+MStEcoraxB6AF0HrG0hnXO5SOmYLvl8POUpGzMB6TheslmUCC7jmE6gLCuLNZnz4OVu97mmNBGV/CK5lwL7CeVKDc3dP27Lt0rjepBWQoVKvKzIqn2x1UnNKeTRkkc8iedJTGmcTiM2T1gUiwQkRNhQA5Maj66feXHCHt+UAXK+UmYzrK+G0ps9aCsRqMR0ROSTl0Yg5VUO2skRKcAI8LZqyMpXNQKVBHFtdHM4sVXG96+ngCenvsvQidJwMpeoi8t+97DMBo97OD8HD0il5r6uhqN8axWXrndEyBxq7dfPsf7Addmp7Eo8ML2vtrouzIfeDHJosH+liNQOScgyKA3cByH5zdY+ftyzvFCmc2XY1JaDPqzAo3es9oFPS6SWBTbKChwDdDQLs6C6YuRSTDYaF5Nc20e8NMz3BHggPkFjYXKB+HkH30Glgor32AaLcRZc5nilyr227nKyGxHXuLUG544a0dzsWx0Y9ooHbVlvTyjpGp3hxQ9ykLEbtSSwurIbxS8Nji7KvmncZRjBxXK2XLJFzFK6mNKEs5gKADadJek0pdOYvG5U4xNjmXXAMbo/p468OSLxqYi86yf/14z+JC3Rb9IyIK+Ky2z2Py1vTkugycApnnV/DmwXPlh/GZfB9AsltTg5QqfydB9mumd1eBtcOSy7Ddjl/ocWNhocuZC6I/Roq69B9hHb/QB7OHuqGgcAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>0cf5ec30939bc750295afc8bdd03d6e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>37e5ec30939bc750295afc8bdd03d6c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:32</sys_created_on>
+        <sys_id>7be5ec30939bc750295afc8bdd03d6cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f3e5ec30939bc750295afc8bdd03d6a4"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>348c66d572594ab4ac26a4370f806663</sys_id>
+        <latest_snapshot>f3e5ec30939bc750295afc8bdd03d6a4</latest_snapshot>
+        <compiler_build/>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=348c66d572594ab4ac26a4370f806663^sys_idNOT IN9cf52070939bc750295afc8bdd03d6db"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan/>
+        <plan_id>348c66d572594ab4ac26a4370f806663</plan_id>
+        <snapshot>f3e5ec30939bc750295afc8bdd03d6a4</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9cf52070939bc750295afc8bdd03d6db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:34</sys_updated_on>
+        <trigger display_value="">dcf52070939bc750295afc8bdd03d6d8</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=348c66d572594ab4ac26a4370f806663"/>
+</record_update>

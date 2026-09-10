@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_choice_set action="INSERT_OR_UPDATE" apply_defaults="true" field="claim_status" table="x_1918526_expens_0_claim" version="3">
+    <sys_choice_set action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>bdd91682c1e0415dbc6f6f9afce1baf3</sys_id>
+      <element>claim_status</element>
+      <sys_update_name>sys_choice_x_1918526_expens_0_claim_claim_status</sys_update_name>
+      <name>x_1918526_expens_0_claim</name>
+      <sys_class_name>sys_choice_set</sys_class_name>
+      <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+      <sys_package display_value="x_1918526_expens_0" source="1182e878935bc750295afc8bdd03d6b2">1182e878935bc750295afc8bdd03d6b2</sys_package>
+      <sys_name>claim_status</sys_name>
+    </sys_choice_set>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>e47604ebc475487782f4f9a2f2014850</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Draft</label>
+      <value>draft</value>
+      <sequence>1</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>b10ec672609f44e5b3b75e1990abbc71</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Submitted</label>
+      <value>submitted</value>
+      <sequence>2</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>d455514c3c2f4aeb866058cb95f413de</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Manager Approved</label>
+      <value>manager_approved</value>
+      <sequence>3</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>d1a6be6810b2479e97061c5733b4714b</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Manager Rejected</label>
+      <value>manager_rejected</value>
+      <sequence>4</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>971072aa0d4b46f0a0a63209445050a8</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Finance Review</label>
+      <value>finance_review</value>
+      <sequence>5</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>3aaafdb54e374371ab807ce19247d14f</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Finance Approved</label>
+      <value>finance_approved</value>
+      <sequence>6</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>ccb46dd2f711440e956819e33d16bfbd</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Finance Rejected</label>
+      <value>finance_rejected</value>
+      <sequence>7</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>d252056a827e49619339147dff10ae19</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Ready for Payment</label>
+      <value>ready_for_payment</value>
+      <sequence>8</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>e0b266b8129a4495aa930f95e512f54d</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Paid</label>
+      <value>paid</value>
+      <sequence>9</sequence>
+      <language>en</language>
+    </sys_choice>
+    <sys_choice action="INSERT_OR_UPDATE" apply_defaults="true">
+      <sys_id>6a88764d39e24accbfaaba4e45c52d2e</sys_id>
+      <name>x_1918526_expens_0_claim</name>
+      <element>claim_status</element>
+      <label>Closed</label>
+      <value>closed</value>
+      <sequence>10</sequence>
+      <language>en</language>
+    </sys_choice>
+  </sys_choice_set>
+</record_update>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+  <sys_number action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>344049f76de3401e854ecd974d341f19</sys_id>
+    <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+    <sys_update_name>sys_number_344049f76de3401e854ecd974d341f19</sys_update_name>
+    <category>x_1918526_expens_0_claim</category>
+    <maximum_digits>7</maximum_digits>
+    <number>1000</number>
+    <prefix>EXP</prefix>
+  </sys_number>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_ui_section caption="Approval Details" section_id="b7a2cdd49f854b6a9fbae98508c153a2" sys_domain="global" table="x_1918526_expens_0_claim" view="">
+    <sys_ui_element action="INSERT_OR_UPDATE" apply_defaults="true">
+      <element>rejection_reason</element>
+      <position>0</position>
+      <sys_id>d0ca8928b0574484be795b6fde610a87</sys_id>
+      <sys_ui_formatter/>
+      <sys_ui_section caption="Approval Details" display_value="Approval Details" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">b7a2cdd49f854b6a9fbae98508c153a2</sys_ui_section>
+      <sys_user/>
+      <type/>
+    </sys_ui_element>
+    <sys_ui_section action="INSERT_OR_UPDATE" apply_defaults="true">
+      <caption>Approval Details</caption>
+      <header>false</header>
+      <name>x_1918526_expens_0_claim</name>
+      <roles/>
+      <sys_domain>global</sys_domain>
+      <sys_id>b7a2cdd49f854b6a9fbae98508c153a2</sys_id>
+      <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+      <sys_user/>
+      <title>false</title>
+      <view_name/>
+      <view display_value="Default view" name="NULL">Default view</view>
+    </sys_ui_section>
+  </sys_ui_section>
+</record_update>
