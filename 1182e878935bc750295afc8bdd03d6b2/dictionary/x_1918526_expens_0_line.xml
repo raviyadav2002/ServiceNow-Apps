@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ec726418a23f40a1b64874023a328d9e" label="Expense Line Item" name="x_1918526_expens_0_line" type="collection">
+        <element display="true" label="Description" mandatory="true" max_length="500" name="description" type="string"/>
+        <element label="Amount" mandatory="true" name="line_amount" type="decimal"/>
+        <element label="Date" name="line_date" type="glide_date"/>
+        <element label="Receipt Attached" name="receipt_attached" type="boolean"/>
+        <element choice="1" label="Expense Type" name="line_expense_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Office Supplies" sequence="5" value="office_supplies"/>
+                <element inactive_on_update="false" label="Hotel" sequence="3" value="hotel"/>
+                <element inactive_on_update="false" label="Travel" sequence="1" value="travel"/>
+                <element inactive_on_update="false" label="Other" sequence="7" value="other"/>
+                <element inactive_on_update="false" label="Training" sequence="6" value="training"/>
+                <element inactive_on_update="false" label="Food" sequence="2" value="food"/>
+                <element inactive_on_update="false" label="Transport" sequence="4" value="transport"/>
+            </choice>
+        </element>
+        <element label="Expense Claim" mandatory="true" name="claim" reference="x_1918526_expens_0_claim" type="reference"/>
+        <index name="index">
+            <element name="claim"/>
+        </index>
+    </element>
+</database>

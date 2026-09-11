@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
-  <sys_security_acl_role action="INSERT_OR_UPDATE" apply_defaults="true">
-    <sys_id>7f4f144944b8407a9fb87888e3964b55</sys_id>
-    <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
-    <sys_update_name>sys_security_acl_role_7f4f144944b8407a9fb87888e3964b55</sys_update_name>
-    <sys_security_acl>42ddce313a3048e39c90e53ea3894215</sys_security_acl>
-    <sys_user_role name="x_1918526_expens_0.expense_admin">0a11d000f96a43faa87e5d4e2d549f9e</sys_user_role>
-  </sys_security_acl_role>
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:21</sys_created_on>
+        <sys_id>7f4f144944b8407a9fb87888e3964b55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1918526_expens_0_line.</sys_name>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_security_acl display_value="x_1918526_expens_0_line">42ddce313a3048e39c90e53ea3894215</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_7f4f144944b8407a9fb87888e3964b55</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:21</sys_updated_on>
+        <sys_user_role display_value="x_1918526_expens_0.expense_admin" name="x_1918526_expens_0.expense_admin">0a11d000f96a43faa87e5d4e2d549f9e</sys_user_role>
+    </sys_security_acl_role>
 </record_update>

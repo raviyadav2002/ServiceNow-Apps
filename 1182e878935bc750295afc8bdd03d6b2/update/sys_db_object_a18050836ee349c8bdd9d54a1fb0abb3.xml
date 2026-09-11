@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
-  <sys_db_object action="INSERT_OR_UPDATE" apply_defaults="true">
-    <sys_id>a18050836ee349c8bdd9d54a1fb0abb3</sys_id>
-    <sys_scope display_value="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_scope>
-    <sys_update_name>sys_db_object_a18050836ee349c8bdd9d54a1fb0abb3</sys_update_name>
-    <access>public</access>
-    <caller_access/>
-    <create_access_controls>false</create_access_controls>
-    <is_extendable>false</is_extendable>
-    <label>Expense Claim</label>
-    <live_feed_enabled>false</live_feed_enabled>
-    <name>x_1918526_expens_0_claim</name>
-    <number_ref category="x_1918526_expens_0_claim" prefix="EXP">344049f76de3401e854ecd974d341f19</number_ref>
-    <scriptable_table>false</scriptable_table>
-    <super_class name="task">017177529cfa455abcbb7cca9a126f74</super_class>
-    <user_role/>
-    <ws_access>true</ws_access>
-  </sys_db_object>
+    <sys_db_object action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
+        <caller_access/>
+        <client_scripts_access>true</client_scripts_access>
+        <configuration_access>false</configuration_access>
+        <create_access>true</create_access>
+        <create_access_controls>false</create_access_controls>
+        <delete_access>false</delete_access>
+        <filter_extension/>
+        <is_data_interface>false</is_data_interface>
+        <is_df_table>false</is_df_table>
+        <is_extendable>false</is_extendable>
+        <label>Expense Claim</label>
+        <live_feed_enabled>false</live_feed_enabled>
+        <name>x_1918526_expens_0_claim</name>
+        <number_ref display_value="EXP">344049f76de3401e854ecd974d341f19</number_ref>
+        <provider_class/>
+        <read_access>true</read_access>
+        <scriptable_table>false</scriptable_table>
+        <super_class display_value="Task" name="task">fc4e9d04a56103108bb220b7a4d21277</super_class>
+        <sys_class_name>sys_db_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-10 13:17:09</sys_created_on>
+        <sys_id>a18050836ee349c8bdd9d54a1fb0abb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Expense Claim</sys_name>
+        <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+        <sys_update_name>sys_db_object_a18050836ee349c8bdd9d54a1fb0abb3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-10 13:17:09</sys_updated_on>
+        <update_access>true</update_access>
+        <user_role/>
+        <ws_access>true</ws_access>
+    </sys_db_object>
 </record_update>
