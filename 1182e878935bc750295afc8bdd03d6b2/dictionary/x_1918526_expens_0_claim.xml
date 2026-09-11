@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a18050836ee349c8bdd9d54a1fb0abb3" extends="task" label="Expense Claim" name="x_1918526_expens_0_claim" type="collection">
+        <element label="Amount" mandatory="true" name="amount" type="decimal"/>
+        <element label="Employee" mandatory="true" name="employee" reference="sys_user" type="reference"/>
+        <element label="Manager" name="manager" reference="sys_user" type="reference"/>
+        <element label="Rejection Reason" max_length="500" name="rejection_reason" type="string"/>
+        <element default="USD" label="Currency" max_length="10" name="currency" type="string"/>
+        <element label="Expense Date" mandatory="true" name="expense_date" type="glide_date"/>
+        <element choice="1" label="Expense Type" mandatory="true" name="expense_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Hotel" sequence="3" value="hotel"/>
+                <element inactive_on_update="false" label="Travel" sequence="1" value="travel"/>
+                <element inactive_on_update="false" label="Transport" sequence="4" value="transport"/>
+                <element inactive_on_update="false" label="Office Supplies" sequence="5" value="office_supplies"/>
+                <element inactive_on_update="false" label="Food" sequence="2" value="food"/>
+                <element inactive_on_update="false" label="Other" sequence="7" value="other"/>
+                <element inactive_on_update="false" label="Training" sequence="6" value="training"/>
+            </choice>
+        </element>
+        <element choice="3" default="draft" label="Claim Status" name="claim_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Finance Approved" sequence="6" value="finance_approved"/>
+                <element inactive_on_update="false" label="Closed" sequence="10" value="closed"/>
+                <element inactive_on_update="false" label="Finance Review" sequence="5" value="finance_review"/>
+                <element inactive_on_update="false" label="Submitted" sequence="2" value="submitted"/>
+                <element inactive_on_update="false" label="Finance Rejected" sequence="7" value="finance_rejected"/>
+                <element inactive_on_update="false" label="Manager Rejected" sequence="4" value="manager_rejected"/>
+                <element inactive_on_update="false" label="Ready for Payment" sequence="8" value="ready_for_payment"/>
+                <element inactive_on_update="false" label="Manager Approved" sequence="3" value="manager_approved"/>
+                <element inactive_on_update="false" label="Paid" sequence="9" value="paid"/>
+                <element inactive_on_update="false" label="Draft" sequence="1" value="draft"/>
+            </choice>
+        </element>
+    </element>
+</database>

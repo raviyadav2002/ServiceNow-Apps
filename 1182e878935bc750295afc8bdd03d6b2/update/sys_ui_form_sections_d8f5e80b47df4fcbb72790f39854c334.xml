@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="d8f5e80b47df4fcbb72790f39854c334" sys_domain="global" table="x_1918526_expens_0_claim" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-10 13:17:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d0602ca9f83c4957bfc06d28e134dcbb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1918526_expens_0_claim" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">d8f5e80b47df4fcbb72790f39854c334</sys_ui_form>
+            <sys_ui_section caption="Expense Claim Details" display_value="Expense Claim Details" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">878064c49f1d4353aeea014119c6adf4</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-10 13:17:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-10 13:17:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a5d7401ab56c466b8cb849de3dde77a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1918526_expens_0_claim" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">d8f5e80b47df4fcbb72790f39854c334</sys_ui_form>
+            <sys_ui_section caption="Description" display_value="Description" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">d9e18cf847444704be5fb58a84484260</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-10 13:17:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-10 13:17:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>847e0d7be4e243c3b6f37a6f9b30defc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1918526_expens_0_claim" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">d8f5e80b47df4fcbb72790f39854c334</sys_ui_form>
+            <sys_ui_section caption="Approval Details" display_value="Approval Details" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">b7a2cdd49f854b6a9fbae98508c153a2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-10 13:17:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-10 13:17:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d1e03cde26ff4e0d95e02fd3cdc24d81</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_1918526_expens_0_claim" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">d8f5e80b47df4fcbb72790f39854c334</sys_ui_form>
+            <sys_ui_section caption="Activity" display_value="Activity" name="x_1918526_expens_0_claim" sys_domain="global" view="Default view">1221e626129649c1ba61c1159a039c6c</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-10 13:17:22</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_1918526_expens_0_claim</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-09-10 13:17:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d8f5e80b47df4fcbb72790f39854c334</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1918526_expens_0_claim</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Expense Claim Application" source="x_1918526_expens_0">1182e878935bc750295afc8bdd03d6b2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Expense Claim Application">1182e878935bc750295afc8bdd03d6b2</sys_scope>
+            <sys_update_name>sys_ui_form_sections_d8f5e80b47df4fcbb72790f39854c334</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-09-10 13:17:22</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
